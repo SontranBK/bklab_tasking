@@ -1,0 +1,4 @@
+#Wed Sep 07 10:48:25 ICT 2022
+base.0=E\:\\ToDo-Task-App-using-Java-in-Android-master\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
