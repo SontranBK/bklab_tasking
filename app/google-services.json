@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "32339226819",
+    "firebase_url": "https://task-9961f-default-rtdb.firebaseio.com",
+    "project_id": "task-9961f",
+    "storage_bucket": "task-9961f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32339226819:android:7f3f129f710d14f71d7276",
+        "android_client_info": {
+          "package_name": "com.frsarker.todotask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32339226819-jgft7lfsghbdeskml44emtacuo2fjj0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFCMHXhWs5xC060r5mYZc3vVJLgRPjnd0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "32339226819-jgft7lfsghbdeskml44emtacuo2fjj0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

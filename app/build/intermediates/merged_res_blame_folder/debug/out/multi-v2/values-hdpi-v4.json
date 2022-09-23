@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.frsarker.todotask.app-mergeDebugResources-17:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\xuanp\\.gradle\\caches\\transforms-3\\5c0ad6cb149d163d7ee2c264a0c10ee9\\transformed\\appcompat-1.1.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}

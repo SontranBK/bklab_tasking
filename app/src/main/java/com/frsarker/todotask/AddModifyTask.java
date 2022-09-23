@@ -67,8 +67,6 @@ public class AddModifyTask extends AppCompatActivity {
         Cursor task = mydb.getSingleTask(task_id);
         if (task != null) {
             task.moveToFirst();
-
-
             edit_text.setText(task.getString(1));
 
             SimpleDateFormat iso8601Format = new SimpleDateFormat("yyyy-MM-dd");
@@ -78,7 +76,6 @@ public class AddModifyTask extends AppCompatActivity {
             }
 
             dateText.setText(new SimpleDateFormat("E, dd MMMM yyyy").format(calendar.getTime()));
-
 
         }
 
@@ -124,8 +121,6 @@ public class AddModifyTask extends AppCompatActivity {
         builder.setNegativeButton("Cancel", null);
         builder.setPositiveButton("Set", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-
-
                 calendar = new GregorianCalendar(datePicker.getYear(), datePicker.getMonth(), datePicker.getDayOfMonth());
                 dateText.setText(new SimpleDateFormat("E, dd MMMM yyyy").format(calendar.getTime()));
 

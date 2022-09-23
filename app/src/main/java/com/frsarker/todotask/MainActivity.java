@@ -1,20 +1,27 @@
 package com.frsarker.todotask;
 
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.NestedScrollView;
-
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class gMainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity {
+    FirebaseAuth mAuth;
     DBHelper mydb;
     LinearLayout empty;
     NestedScrollView scrollView;
@@ -23,13 +30,13 @@ public class gMainActivity extends AppCompatActivity {
     ArrayList<HashMap<String, String>> todayList = new ArrayList<HashMap<String, String>>();
     ArrayList<HashMap<String, String>> tomorrowList = new ArrayList<HashMap<String, String>>();
     ArrayList<HashMap<String, String>> upcomingList = new ArrayList<HashMap<String, String>>();
-
+    Button Personal,Company;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         setContentView(R.layout.activity_main);
-
+        mAuth = FirebaseAuth.getInstance();
         mydb = new DBHelper(this);
         empty = findViewById(R.id.empty);
         scrollView = findViewById(R.id.scrollView);
@@ -39,6 +46,17 @@ public class gMainActivity extends AppCompatActivity {
         taskListToday = findViewById(R.id.taskListToday);
         taskListTomorrow = findViewById(R.id.taskListTomorrow);
         taskListUpcoming = findViewById(R.id.taskListUpcoming);
+        Personal = findViewById(R.id.Personal);
+        Company = findViewById(R.id.Company);
+
+    }
+
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user == null){
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+        }
     }
 
     public void openAddModifyTask(View view) {

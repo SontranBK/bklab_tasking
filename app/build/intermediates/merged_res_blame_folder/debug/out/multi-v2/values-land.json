@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.frsarker.todotask.app-mergeDebugResources-17:/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\xuanp\\.gradle\\caches\\transforms-3\\5c0ad6cb149d163d7ee2c264a0c10ee9\\transformed\\appcompat-1.1.0\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\xuanp\\.gradle\\caches\\transforms-3\\98891f78a729f1a1f3c1aa8283b930c3\\transformed\\material-1.0.0\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "10",
+                        "endOffsets": "222"
+                    },
+                    "to": {
+                        "startLines": "5",
+                        "startColumns": "4",
+                        "startOffsets": "264",
+                        "endLines": "8",
+                        "endColumns": "10",
+                        "endOffsets": "431"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -6,14 +6,36 @@
     android:background="#FFFFFF">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="top"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/Personal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Personal"
+            android:backgroundTint="#03A9F4"/>
+
+        <Button
+            android:id="@+id/Company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Company" />
+    </LinearLayout>
+
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
+        android:layout_height="662dp"
+        android:layout_gravity="bottom"
         android:clipToPadding="false"
         android:isScrollContainer="false"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
@@ -117,40 +139,14 @@
         android:layout_gravity="center"
         android:orientation="vertical"
         android:padding="30dp"
-        android:visibility="visible">
-
-        <TextView
-            android:id="@+id/emptyTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hey"
-            android:textColor="#EC5D5D"
-            android:textSize="38dp"
-            android:textStyle="normal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="you are\nfree today"
-            android:textColor="#323872"
-            android:textSize="34dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="You have no task to do today"
-            android:textColor="#CDD1D5"
-            android:textSize="22dp"
-            android:textStyle="bold" />
+        android:visibility="invisible">
 
         <Button
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginBottom="350dp"
             android:background="@drawable/radius_border_button"
             android:onClick="openAddModifyTask"
             android:paddingHorizontal="70dp"
@@ -165,9 +161,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
         android:contentDescription="Add Task"
         android:onClick="openAddModifyTask"
+        android:layout_marginBottom="60dp"
         android:src="@drawable/ic_fab_add" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

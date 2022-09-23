@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\ToDo-Task-App-using-Java-in-Android-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "E:\\Testapp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\xuanp\\.gradle\\caches\\transforms-2\\files-2.1\\16de5a105d918594ea18965f8161a8bc\\material-1.0.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\xuanp\\.gradle\\caches\\transforms-2\\files-2.1\\68b05c64f67c4926d044c8cc11c6304e\\material-1.0.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\xuanp\\.gradle\\caches\\transforms-2\\files-2.1\\ef8a364a6a39421e69c96cf68eeb3e63\\appcompat-1.1.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\xuanp\\.gradle\\caches\\transforms-2\\files-2.1\\d2f313e4bd36a6875884dd8132931003\\appcompat-1.1.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
