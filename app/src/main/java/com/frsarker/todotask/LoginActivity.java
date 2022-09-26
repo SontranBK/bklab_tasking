@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                             if( value.getLong("Role") == 1){
-                                startActivity(new Intent(LoginActivity.this,AddModifyTask_Company.class));
+                                startActivity(new Intent(LoginActivity.this,AdminActivity.class));
                             }
                             else{
                                 startActivity(new Intent(LoginActivity.this,MainActivity.class));

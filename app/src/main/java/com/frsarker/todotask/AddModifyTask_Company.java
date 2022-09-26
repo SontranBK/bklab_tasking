@@ -20,22 +20,17 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 public class AddModifyTask_Company extends AppCompatActivity {
-    static int acount = 1;
+    String Colab ="";
     Calendar calendarStart,calendarEnd;
-    Boolean isModify = false;
-
     EditText edit_text,edit_nametask;
-    TextView dateTextStart,dateTextEnd,txtStart,txtEnd;
+    TextView dateTextStart,dateTextEnd,txtStart,txtEnd,Colab_with;
     Button save_btn;
     private DatabaseReference mDatabase;
-    String[] task_id;
     FirebaseAuth mAuth;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,21 +50,20 @@ public class AddModifyTask_Company extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         dateTextStart.setText(new SimpleDateFormat("E, dd MMMM yyyy").format(calendarStart.getTime()));
         dateTextEnd.setText(new SimpleDateFormat("E, dd MMMM yyyy").format(calendarEnd.getTime()));
+        Colab_with = findViewById(R.id.Colab);
+        Colab_with.setText(getIntent().getStringExtra("Member"));
+        edit_nametask.setText(getIntent().getStringExtra("NameTask"));
+        edit_text.setText(getIntent().getStringExtra("Description"));
+        dateTextStart.setText(getIntent().getStringExtra("TimeBegin"));
+        dateTextEnd.setText(getIntent().getStringExtra("TimeEnd"));
     }
     public void saveTask(View v) {
 
         /*Checking for Empty Task*/
-        if (edit_text.getText().toString().trim().length() > 0) {
-
-            if (isModify) {
-                UpdateTask();
-                Toast.makeText(getApplicationContext(), "Task Updated.", Toast.LENGTH_SHORT).show();
-            } else {
-                AddTask();
-
-            }
-            finish();
-
+        if (edit_text.getText().toString().trim().length() > 0 && edit_nametask.getText().toString().trim().length() >0) {
+           AddTask();
+           startActivity(new Intent(AddModifyTask_Company.this,TaskList.class));
+           finish();
         } else {
             Toast.makeText(getApplicationContext(), "Empty task can't be saved.", Toast.LENGTH_SHORT).show();
         }
@@ -78,15 +72,14 @@ public class AddModifyTask_Company extends AppCompatActivity {
     public void AddTask(){
         Toast.makeText(getApplicationContext(), "Task Added.", Toast.LENGTH_SHORT).show();
         FirebaseUser user = mAuth.getCurrentUser();
-        ArrayList<String> Colab;
-        task_id[acount-1] = Integer.toString(acount);
-        mDatabase.child("Task"+acount).child("Name Task").setValue(edit_nametask.getText().toString());
-        mDatabase.child("Task"+acount).child("Deadline").setValue("1/1/2021");
-        mDatabase.child("Task"+acount).child("Id").setValue(task_id[acount-1]);
-        acount++;
-    }
-    public  void UpdateTask(){
-
+        String task_id = mDatabase.push().getKey();
+        mDatabase.child("Task").child(task_id).child("NameTask").setValue(edit_nametask.getText().toString());
+        mDatabase.child("Task").child(task_id).child("TimeBegin").setValue(dateTextStart.getText().toString());
+        mDatabase.child("Task").child(task_id).child("TimeEnd").setValue(dateTextEnd.getText().toString());
+        mDatabase.child("Task").child(task_id).child("Status").setValue("In progress");
+        mDatabase.child("Task").child(task_id).child("Id").setValue(task_id);
+        mDatabase.child("Task").child(task_id).child("Member").setValue(Colab_with.getText().toString());
+        mDatabase.child("Task").child(task_id).child("Description").setValue(edit_text.getText().toString());
     }
     public void chooseDateBegin(View view) {
         final View dialogView = View.inflate(this, R.layout.date_picker, null);
@@ -121,9 +114,15 @@ public class AddModifyTask_Company extends AppCompatActivity {
         builder.show();
     }
     public void OpenUserList(View view){
-        startActivity(new Intent(AddModifyTask_Company.this,userList.class));
+        Intent intent = new Intent(AddModifyTask_Company.this,userList.class);
+        intent.putExtra("Id","1");
+        intent.putExtra("Member","1");
+        intent.putExtra("NameTask",edit_nametask.getText().toString());
+        intent.putExtra("Description",edit_text.getText().toString());
+        intent.putExtra("TimeBegin",dateTextStart.getText().toString());
+        intent.putExtra("TimeEnd",dateTextEnd.getText().toString());
+        startActivity(intent);
         finish();
-
     }
 
 }

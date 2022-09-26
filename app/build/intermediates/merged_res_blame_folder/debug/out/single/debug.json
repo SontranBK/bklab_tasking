@@ -4,12 +4,24 @@
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable-xxxhdpi_ic_baseline_supervised_user_circle_24.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-pngs-14:\\drawable-xxxhdpi\\ic_baseline_supervised_user_circle_24.png"
+    },
+    {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable-xxxhdpi_ic_fab_add.png.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-pngs-14:\\drawable-xxxhdpi\\ic_fab_add.png"
     },
     {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\layout_acitivy_pofile.xml.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\layout\\acitivy_pofile.xml"
+    },
+    {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable_cal.png.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\drawable\\cal.png"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-mdpi_ic_launcher_user.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-mdpi\\ic_launcher_user.png"
     },
     {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\layout_task_list_row_company.xml.flat",
@@ -24,16 +36,64 @@
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-pngs-14:\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
     {
+        "merged": "com.frsarker.todotask.app-merged_res-19:/drawable-xxxhdpi_ic_baseline_arrow_back_24.png.flat",
+        "source": "com.frsarker.todotask.app-pngs-14:/drawable-xxxhdpi/ic_baseline_arrow_back_24.png"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-xxhdpi_ic_launcher_user_foreground.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-xxhdpi\\ic_launcher_user_foreground.png"
+    },
+    {
+        "merged": "com.frsarker.todotask.app-merged_res-19:/drawable-hdpi_ic_baseline_arrow_back_24.png.flat",
+        "source": "com.frsarker.todotask.app-pngs-14:/drawable-hdpi/ic_baseline_arrow_back_24.png"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-anydpi-v26_ic_launcher_user_round.xml.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-anydpi-v26\\ic_launcher_user_round.xml"
+    },
+    {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.frsarker.todotask.app-merged_res-19:/drawable-ldpi_ic_baseline_arrow_back_24.png.flat",
+        "source": "com.frsarker.todotask.app-pngs-14:/drawable-ldpi/ic_baseline_arrow_back_24.png"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable-xhdpi_ic_baseline_supervised_user_circle_24.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-pngs-14:\\drawable-xhdpi\\ic_baseline_supervised_user_circle_24.png"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-mdpi_ic_launcher_user_round.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-mdpi\\ic_launcher_user_round.png"
+    },
+    {
+        "merged": "com.frsarker.todotask.app-merged_res-19:/drawable-xxhdpi_ic_baseline_arrow_back_24.png.flat",
+        "source": "com.frsarker.todotask.app-pngs-14:/drawable-xxhdpi/ic_baseline_arrow_back_24.png"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable-hdpi_ic_baseline_supervised_user_circle_24.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-pngs-14:\\drawable-hdpi\\ic_baseline_supervised_user_circle_24.png"
     },
     {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
+        "merged": "com.frsarker.todotask.app-merged_res-19:/layout_acitivy_pofile.xml.flat",
+        "source": "com.frsarker.todotask.app-main-21:/layout/acitivy_pofile.xml"
+    },
+    {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-pngs-14:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-xhdpi_ic_launcher_user.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-xhdpi\\ic_launcher_user.png"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-xhdpi_ic_launcher_user_foreground.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-xhdpi\\ic_launcher_user_foreground.png"
     },
     {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -48,8 +108,24 @@
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\layout\\activity_userlist.xml"
     },
     {
+        "merged": "com.frsarker.todotask.app-merged_res-19:/layout_activity_main.xml.flat",
+        "source": "com.frsarker.todotask.app-main-21:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-xxxhdpi_ic_launcher_user_foreground.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-xxxhdpi\\ic_launcher_user_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable_radius_border_button_text.xml.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\drawable\\radius_border_button_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-xxxhdpi_ic_launcher_user_round.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-xxxhdpi\\ic_launcher_user_round.png"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-xxhdpi_ic_launcher_user.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-xxhdpi\\ic_launcher_user.png"
     },
     {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable-ldpi_ic_fab_add.png.flat",
@@ -60,12 +136,16 @@
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "com.frsarker.todotask.app-merged_res-19:/layout_item.xml.flat",
-        "source": "com.frsarker.todotask.app-main-21:/layout/item.xml"
-    },
-    {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable-anydpi-v21_ic_baseline_supervised_user_circle_24.xml.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-pngs-14:\\drawable-anydpi-v21\\ic_baseline_supervised_user_circle_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-xxhdpi_ic_launcher_user_round.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-xxhdpi\\ic_launcher_user_round.png"
     },
     {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\layout_activity_add_modify_task.xml.flat",
@@ -76,8 +156,20 @@
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable-ldpi_ic_baseline_supervised_user_circle_24.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-pngs-14:\\drawable-ldpi\\ic_baseline_supervised_user_circle_24.png"
+    },
+    {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable-mdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-pngs-14:\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-hdpi_ic_launcher_user.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-hdpi\\ic_launcher_user.png"
+    },
+    {
+        "merged": "com.frsarker.todotask.app-merged_res-19:/drawable-xhdpi_ic_baseline_arrow_back_24.png.flat",
+        "source": "com.frsarker.todotask.app-pngs-14:/drawable-xhdpi/ic_baseline_arrow_back_24.png"
     },
     {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\layout_item.xml.flat",
@@ -86,6 +178,10 @@
     {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable-mdpi_ic_baseline_supervised_user_circle_24.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-pngs-14:\\drawable-mdpi\\ic_baseline_supervised_user_circle_24.png"
     },
     {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
@@ -100,12 +196,24 @@
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-hdpi_ic_launcher_user_round.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-hdpi\\ic_launcher_user_round.png"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable-xxhdpi_ic_baseline_supervised_user_circle_24.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-pngs-14:\\drawable-xxhdpi\\ic_baseline_supervised_user_circle_24.png"
+    },
+    {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable-hdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-pngs-14:\\drawable-hdpi\\ic_launcher_background.png"
     },
     {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable-xxhdpi_ic_fab_add.png.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\drawable-xxhdpi\\ic_fab_add.png"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\layout_activity_delete_update_task_company.xml.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\layout\\activity_delete_update_task_company.xml"
     },
     {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\layout_activity_register.xml.flat",
@@ -124,6 +232,22 @@
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-xxxhdpi_ic_launcher_user.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-xxxhdpi\\ic_launcher_user.png"
+    },
+    {
+        "merged": "com.frsarker.todotask.app-merged_res-19:/drawable-mdpi_ic_baseline_arrow_back_24.png.flat",
+        "source": "com.frsarker.todotask.app-pngs-14:/drawable-mdpi/ic_baseline_arrow_back_24.png"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-hdpi_ic_launcher_user_foreground.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-hdpi\\ic_launcher_user_foreground.png"
+    },
+    {
+        "merged": "com.frsarker.todotask.app-merged_res-19:/drawable-anydpi-v21_ic_baseline_arrow_back_24.xml.flat",
+        "source": "com.frsarker.todotask.app-pngs-14:/drawable-anydpi-v21/ic_baseline_arrow_back_24.xml"
+    },
+    {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable-xxhdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-pngs-14:\\drawable-xxhdpi\\ic_launcher_background.png"
     },
@@ -140,12 +264,24 @@
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-pngs-14:\\drawable-anydpi-v21\\ic_fab_add.xml"
     },
     {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\layout_activity_tasklist.xml.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\layout\\activity_tasklist.xml"
+    },
+    {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\layout_task_list_row.xml.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\layout\\task_list_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-anydpi-v26_ic_launcher_user.xml.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-anydpi-v26\\ic_launcher_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-mdpi_ic_launcher_user_foreground.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-mdpi\\ic_launcher_user_foreground.png"
     },
     {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable-ldpi_ic_launcher_background.png.flat",
@@ -178,6 +314,10 @@
     {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\drawable_radius_border_button.xml.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\drawable\\radius_border_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-xhdpi_ic_launcher_user_round.png.flat",
+        "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-21:\\mipmap-xhdpi\\ic_launcher_user_round.png"
     },
     {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-19:\\mipmap-xhdpi_ic_launcher.png.flat",

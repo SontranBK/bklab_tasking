@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/CustomTheme">
+        <activity android:name=".AccountSettingsActivity"></activity>
+        <activity android:name=".userList_Update"></activity>
+        <activity android:name=".Update_Delete_Task_Company"></activity>
         <activity android:name=".userList"></activity>
         <activity android:name=".TaskList"></activity>
         <activity android:name=".AddModifyTask_Company"></activity>

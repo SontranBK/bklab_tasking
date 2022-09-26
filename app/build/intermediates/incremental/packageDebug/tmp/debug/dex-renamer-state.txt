@@ -1,4 +1,4 @@
-#Fri Sep 23 00:08:12 ICT 2022
+#Mon Sep 26 10:34:58 ICT 2022
 base.1=E\:\\Testapp\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
 path.1=classes2.dex
 base.0=E\:\\Testapp\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex

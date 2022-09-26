@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<HashMap<String, String>> todayList = new ArrayList<HashMap<String, String>>();
     ArrayList<HashMap<String, String>> tomorrowList = new ArrayList<HashMap<String, String>>();
     ArrayList<HashMap<String, String>> upcomingList = new ArrayList<HashMap<String, String>>();
-    Button Personal,Company;
+    Button Personal,Company,User;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +48,15 @@ public class MainActivity extends AppCompatActivity {
         taskListUpcoming = findViewById(R.id.taskListUpcoming);
         Personal = findViewById(R.id.Personal);
         Company = findViewById(R.id.Company);
-
+        User = findViewById(R.id.button3);
+        User.setOnClickListener(view->{
+            startActivity(new Intent(MainActivity.this,AccountSettingsActivity.class));
+            finish();
+        });
+        Company.setOnClickListener(view->{
+            startActivity(new Intent(MainActivity.this,TaskList.class));
+            finish();
+        });
     }
 
     protected void onStart() {
@@ -58,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
         }
     }
-
     public void openAddModifyTask(View view) {
         startActivity(new Intent(this, AddModifyTask.class));
     }

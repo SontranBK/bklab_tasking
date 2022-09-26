@@ -23,6 +23,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/CustomTheme" >
+        <activity android:name="com.frsarker.todotask.AccountSettingsActivity" />
+        <activity android:name="com.frsarker.todotask.userList_Update" />
+        <activity android:name="com.frsarker.todotask.Update_Delete_Task_Company" />
         <activity android:name="com.frsarker.todotask.userList" />
         <activity android:name="com.frsarker.todotask.TaskList" />
         <activity android:name="com.frsarker.todotask.AddModifyTask_Company" />

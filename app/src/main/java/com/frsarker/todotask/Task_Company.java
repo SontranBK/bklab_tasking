@@ -3,16 +3,31 @@ package com.frsarker.todotask;
 import java.util.ArrayList;
 
 public class Task_Company {
-    String Name_Task;
-    String Status;
-    ArrayList<String> Colab;
-    public String getName_Task(){
-        return Name_Task;
+    String NameTask;
+    String Status = "In Progress";
+    String Member;
+    String Description;
+    String TimeBegin,TimeEnd;
+    String Id;
+    public String getNameTask(){
+        return NameTask;
     }
     public String getStatus(){
         return Status;
     }
-    public ArrayList<String> getColab(){
-        return Colab;
+    public String getMember(){
+        return Member;
+    }
+    public String getDescription(){
+        return Description;
+    }
+    public String getTimeBegin(){
+        return TimeBegin;
+    }
+    public String getTimeEnd(){
+        return TimeEnd;
+    }
+    public String getId(){
+        return  Id;
     }
 }
