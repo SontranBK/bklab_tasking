@@ -1,49 +1,200 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="wrap_content" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <ScrollView android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/content_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/EmailInput"
-                android:layout_width="match_parent"
+
+            <RelativeLayout
+                android:id="@+id/page_login_ek1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="200dp"
-                android:hint="Email"
-                android:layout_marginBottom="50dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                <View
+                    android:id="@+id/_bg__login_ek2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/_bg__login_ek2_shape" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/PasswordInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="Password" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <RelativeLayout
+                    android:id="@+id/shape"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-100dp"
+                    android:layout_marginTop="-100dp">
 
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="105dp"
-            android:layout_height="61dp"
-            android:text="Login"
-            android:layout_gravity="center"/>
+                    <View
+                        android:id="@+id/ellipse_1"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="56dp"
+                        android:alpha="0.47999998927116"
+                        android:background="@drawable/ellipse_1_shape" />
 
-    </LinearLayout>
+                    <View
+                        android:id="@+id/ellipse_1_ek1"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="100dp"
+                        android:layout_marginTop="0dp"
+                        android:alpha="0.47999998927116"
+                        android:background="@drawable/ellipse_1_ek1_shape" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/undraw_mobile_re_q4nk_1"
+                    android:layout_width="255dp"
+                    android:layout_height="244dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="150dp"
+                    android:contentDescription="undraw_mobile_re_q4nk_1"
+                    android:src="@drawable/undraw_mobile_re_q4nk_1" />
+
+                <TextView
+                    android:id="@+id/welcome_back_"
+                    android:layout_width="159dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="90dp"
+                    android:fontFamily="Roboto"
+                    android:text="Welcome Back!"
+                    android:textColor="@color/welcome_back__color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <RelativeLayout
+                    android:id="@+id/input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="430dp">
+
+                    <View
+                        android:id="@+id/rectangle_2"
+                        android:layout_width="325dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/rectangle_2_shape" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/enter_your_email"
+                        android:layout_width="292dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="Roboto"
+                        android:hint="Enter your email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/welcome_back__color"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/input_ek1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="510dp">
+
+                    <View
+                        android:id="@+id/rectangle_2_ek1"
+                        android:layout_width="325dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/rectangle_2_ek1_shape" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/confirm_password"
+                        android:layout_width="292dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="Roboto"
+                        android:hint="Confirm passsword"
+                        android:inputType="textPassword"
+                        android:textColor="@color/welcome_back__color"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/forgot_password"
+                    android:layout_width="125dp"
+                    android:layout_height="51.5dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginLeft="235dp"
+                    android:layout_marginTop="570dp"
+                    android:fontFamily="Roboto"
+                    android:gravity="center"
+                    android:hint="Forgot password"
+                    android:textColor="@color/forgot_password_color"
+                    android:textSize="13sp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="625dp"
+                    android:onClick="loginUser">
+
+                    <View
+                        android:id="@+id/rectangle_1"
+                        android:layout_width="325dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/rectangle_1_shape" />
+
+                    <TextView
+                        android:id="@+id/get_started"
+                        android:layout_width="337dp"
+                        android:layout_height="73dp"
+                        android:layout_gravity="center_horizontal|center"
+                        android:layout_marginLeft="-1dp"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="Roboto"
+                        android:gravity="center"
+                        android:text="Login"
+                        android:textColor="@color/get_started_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/already_have_an_account___sign_in"
+                    android:layout_width="246.5dp"
+                    android:layout_height="27.5dp"
+                    android:layout_marginLeft="74dp"
+                    android:layout_marginTop="730dp"
+                    android:fontFamily="Roboto"
+                    android:text="Already have an account ? Register"
+                    android:textColor="@color/welcome_back__color"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+</HorizontalScrollView>

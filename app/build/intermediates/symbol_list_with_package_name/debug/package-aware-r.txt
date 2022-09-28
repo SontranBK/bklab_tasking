@@ -595,6 +595,7 @@ bool abc_action_bar_embed_tabs
 bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
 bool mtrl_btn_textappearance_all_caps
+color _bg__login_ek2_color
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -625,6 +626,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color black
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -672,10 +674,13 @@ color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
 color dim_foreground_material_light
+color ellipse_1_color
 color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color forgot_password_color
+color get_started_color
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color ic_launcher_background
@@ -728,6 +733,10 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color purple_200
+color purple_500
+color purple_700
+color rectangle_2_color
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -740,8 +749,12 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color teal_200
+color teal_700
 color tooltip_background_dark
 color tooltip_background_light
+color welcome_back__color
+color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -962,6 +975,7 @@ dimen tooltip_precise_anchor_threshold
 dimen tooltip_vertical_padding
 dimen tooltip_y_offset_non_touch
 dimen tooltip_y_offset_touch
+drawable _bg__login_ek2_shape
 drawable abc_ab_share_pack_mtrl_alpha
 drawable abc_action_bar_item_background_material
 drawable abc_btn_borderless_material
@@ -1085,6 +1099,8 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ellipse_1_ek1_shape
+drawable ellipse_1_shape
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_baseline_arrow_back_24
@@ -1112,8 +1128,12 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable radius_border_button
 drawable radius_border_button_text
+drawable rectangle_1_shape
+drawable rectangle_2_ek1_shape
+drawable rectangle_2_shape
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable undraw_mobile_re_q4nk_1
 id ALT
 id AccountSettings
 id Add_Company
@@ -1127,14 +1147,12 @@ id Company
 id CreateAccount
 id CreateTask
 id Edit_Profile
-id EmailInput
 id FUNCTION
 id FullName
 id FullName_Profile
 id Logout
 id META
 id Name_
-id PasswordInput
 id Personal
 id Role
 id Role_
@@ -1142,6 +1160,7 @@ id Role_Profile
 id SHIFT
 id SYM
 id Satus
+id _bg__login_ek2
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -1199,6 +1218,7 @@ id adjust_height
 id adjust_width
 id alertTitle
 id all
+id already_have_an_account___sign_in
 id always
 id appbar
 id async
@@ -1214,7 +1234,6 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id btnCreateAccount
-id btnLogin
 id button
 id button2
 id button3
@@ -1233,9 +1252,11 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id confirm_password
 id container
 id content
 id contentPanel
+id content_container
 id coordinator
 id custom
 id customPanel
@@ -1264,10 +1285,13 @@ id edtEmail
 id edtFullname
 id edtNumberPhone
 id edtPassword
+id ellipse_1
+id ellipse_1_ek1
 id empty
 id end
 id enterAlways
 id enterAlwaysCollapsed
+id enter_your_email
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1278,6 +1302,8 @@ id fill_vertical
 id filled
 id fixed
 id forever
+id forgot_password
+id get_started
 id ghost_view
 id gone
 id group_divider
@@ -1291,6 +1317,8 @@ id ifRoom
 id image
 id imageView2
 id info
+id input
+id input_ek1
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -1302,6 +1330,7 @@ id line1
 id line3
 id listMode
 id list_item
+id login
 id main_container
 id masked
 id message
@@ -1322,6 +1351,7 @@ id on
 id otherContainer
 id outline
 id packed
+id page_login_ek1
 id parallax
 id parent
 id parentPanel
@@ -1331,6 +1361,9 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id rectangle_1
+id rectangle_2
+id rectangle_2_ek1
 id right
 id right_icon
 id right_side
@@ -1356,6 +1389,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id shape
 id shortcut
 id showCustom
 id showHome
@@ -1421,6 +1455,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id unchecked
+id undraw_mobile_re_q4nk_1
 id uniform
 id unlabeled
 id up
@@ -1428,6 +1463,7 @@ id useLogo
 id userList
 id view_offset_helper
 id visible
+id welcome_back_
 id wide
 id withText
 id wrap

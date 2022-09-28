@@ -55,7 +55,7 @@ public class RegisterActivity extends AppCompatActivity {
                     FirebaseUser user = mAuth.getCurrentUser();
                     DocumentReference df = fStore.collection("User").document(user.getUid());
                     Map<String, Object> userInfo = new HashMap<>();
-                    userInfo.put("Fullname", InputFullname.getText().toString());
+                    userInfo.put("Name", InputFullname.getText().toString());
                     userInfo.put("UserEmail", InputEmail.getText().toString());
                     userInfo.put("PhoneNumber", InputPhoneNumber.getText().toString());
                     if (ckAdmin.isChecked()) {

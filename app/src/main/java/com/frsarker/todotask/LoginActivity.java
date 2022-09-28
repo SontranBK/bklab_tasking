@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,9 +29,20 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
-    Button btnLogin;
-    TextInputEditText Email;
-    TextInputEditText Password;
+
+    private View _bg__login_ek2;
+    private View ellipse_1;
+    private View ellipse_1_ek1;
+    private ImageView undraw_mobile_re_q4nk_1;
+    private TextView welcome_back_;
+    private View rectangle_2;
+    private TextView enter_your_email;
+    private View rectangle_2_ek1;
+    private TextView confirm_password;
+    private TextView forgot_password;
+    private View rectangle_1;
+    private TextView get_started;
+    private TextView already_have_an_account___sign_in;
     FirebaseAuth mAuth;
     FirebaseFirestore fstore;
     private DatabaseReference mDatabase;
@@ -38,18 +50,26 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        btnLogin = findViewById(R.id.btnLogin);
-        Email = findViewById(R.id.EmailInput);
-        Password = findViewById(R.id.PasswordInput);
+        _bg__login_ek2 = (View) findViewById(R.id._bg__login_ek2);
+        ellipse_1 = (View) findViewById(R.id.ellipse_1);
+        ellipse_1_ek1 = (View) findViewById(R.id.ellipse_1_ek1);
+        undraw_mobile_re_q4nk_1 = (ImageView) findViewById(R.id.undraw_mobile_re_q4nk_1);
+        welcome_back_ = (TextView) findViewById(R.id.welcome_back_);
+        rectangle_2 = (View) findViewById(R.id.rectangle_2);
+        enter_your_email = (TextView) findViewById(R.id.enter_your_email);
+        rectangle_2_ek1 = (View) findViewById(R.id.rectangle_2_ek1);
+        confirm_password = (TextView) findViewById(R.id.confirm_password);
+        forgot_password = (TextView) findViewById(R.id.forgot_password);
+        rectangle_1 = (View) findViewById(R.id.rectangle_1);
+        get_started = (TextView) findViewById(R.id.get_started);
+        already_have_an_account___sign_in = (TextView) findViewById(R.id.already_have_an_account___sign_in);
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        btnLogin.setOnClickListener(view->{
-            loginUser();
-        });
+
 
     }
-    public void loginUser(){
-        mAuth.signInWithEmailAndPassword(Email.getText().toString(),Password.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+    public void loginUser(View view){
+        mAuth.signInWithEmailAndPassword(enter_your_email.getText().toString(),confirm_password.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
@@ -61,10 +81,15 @@ public class LoginActivity extends AppCompatActivity {
                     documentReference.addSnapshotListener(LoginActivity.this, new EventListener<DocumentSnapshot>() {
                         @Override
                         public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                            mDatabase.child("Users").child(user.getUid()).child("Name").setValue(value.getString("Name"));
                             if( value.getLong("Role") == 1){
+                                mDatabase.child("Users").child(user.getUid()).child("Role").setValue("Admin");
+
                                 startActivity(new Intent(LoginActivity.this,AdminActivity.class));
                             }
                             else{
+                                mDatabase.child("Users").child(user.getUid()).child("Role").setValue(value.getString("User"));
+
                                 startActivity(new Intent(LoginActivity.this,MainActivity.class));
                             }
                         }

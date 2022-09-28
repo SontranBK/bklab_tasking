@@ -9,18 +9,26 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+
+import java.util.ArrayList;
 
 
 public class AccountSettingsActivity extends AppCompatActivity {
@@ -30,6 +38,8 @@ public class AccountSettingsActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
     FirebaseFirestore fstore;
+    MyAdapter myAdapter;
+    ArrayList<User> list;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,22 +55,21 @@ public class AccountSettingsActivity extends AppCompatActivity {
         edit_profile = findViewById(R.id.Edit_Profile);
         change_passoword = findViewById(R.id.Change_Password);
         mAuth = FirebaseAuth.getInstance();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabase = FirebaseDatabase.getInstance().getReference("Users");
         fstore = FirebaseFirestore.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
-        DocumentReference documentReference = fstore.collection("User").document(user.getUid());
-        documentReference.addSnapshotListener(AccountSettingsActivity.this, new EventListener<DocumentSnapshot>() {
+        mDatabase.child(user.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                FullName.setText(value.getString("Fullname"));
-                if(value.getLong("Role") ==1){
-                    Role.setText("Admin");
-                }
-                else if (value.getLong("Role") ==2){
-                    Role.setText("User");
-                }
-                else{
-                    Role.setText("Guest");
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (task.isSuccessful()){
+
+                    if (task.getResult().exists()){
+
+                        DataSnapshot dataSnapshot = task.getResult();
+                        FullName.setText(String.valueOf(dataSnapshot.child("Name").getValue()));
+                        Role.setText(String.valueOf(dataSnapshot.child("Role").getValue()));
+                    }
+
                 }
             }
         });
@@ -68,6 +77,7 @@ public class AccountSettingsActivity extends AppCompatActivity {
     public void Logout(View view){
         mAuth.signOut();
         startActivity(new Intent(AccountSettingsActivity.this,LoginActivity.class));
+        finish();
     }
     public void Back(View view){
         startActivity(new Intent(AccountSettingsActivity.this,MainActivity.class));

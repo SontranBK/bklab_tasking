@@ -5,8 +5,16 @@
       <map>
         <entry key="..\:/Testapp/app/src/main/res/drawable-anydpi/ic_fab_add.xml" value="0.2615" />
         <entry key="..\:/Testapp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2265" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable-xhdpi/_bg__login_ek2_shape.xml" value="0.1715" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable-xhdpi/ellipse_1_ek1_shape.xml" value="0.1715" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable-xhdpi/ellipse_1_shape.xml" value="0.1715" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable-xhdpi/rectangle_1_shape.xml" value="0.1715" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable-xhdpi/rectangle_2_ek1_shape.xml" value="0.1715" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable-xhdpi/rectangle_2_shape.xml" value="0.1715" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1715" />
         <entry key="..\:/Testapp/app/src/main/res/drawable/ic_baseline_supervised_user_circle_24.xml" value="0.2615" />
         <entry key="..\:/Testapp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3575" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable/radius_border_button.xml" value="0.1715" />
         <entry key="..\:/Testapp/app/src/main/res/layout/acitivy_pofile.xml" value="0.4" />
         <entry key="..\:/Testapp/app/src/main/res/layout/activity_add_modify_task.xml" value="0.259375" />
         <entry key="..\:/Testapp/app/src/main/res/layout/activity_add_modify_task_company.xml" value="0.259375" />
