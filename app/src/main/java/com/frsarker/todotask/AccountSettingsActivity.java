@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -15,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -32,11 +34,12 @@ import java.util.ArrayList;
 
 
 public class AccountSettingsActivity extends AppCompatActivity {
-    TextView AccountSettings,Logout,FullName,Role,FullName_Profile,Role_Profile;
+    TextView AccountSettings,Logout,FullName,Gmail,FullName_Profile,Role_Profile;
     ImageView img,Back;
     Button edit_profile,change_passoword;
     FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
+    BottomNavigationView bottomNavigationView;
     FirebaseFirestore fstore;
     MyAdapter myAdapter;
     ArrayList<User> list;
@@ -44,16 +47,10 @@ public class AccountSettingsActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acitivy_pofile);
-        Back=findViewById(R.id.Back);
-        AccountSettings = findViewById(R.id.AccountSettings);
-        Logout = findViewById(R.id.Logout);
-        FullName = findViewById(R.id.Name_);
-        Role = findViewById(R.id.Role_);
-        FullName_Profile = findViewById(R.id.FullName_Profile);
-        Role_Profile = findViewById(R.id.Role_Profile);
-        img = findViewById(R.id.imageView2);
-        edit_profile = findViewById(R.id.Edit_Profile);
-        change_passoword = findViewById(R.id.Change_Password);
+        Gmail = findViewById(R.id.Profile_gmail);
+        FullName_Profile = findViewById(R.id.Name_user);
+        edit_profile = findViewById(R.id.btn_edtProfile);
+        change_passoword = findViewById(R.id.btn_changepass);
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference("Users");
         fstore = FirebaseFirestore.getInstance();
@@ -66,11 +63,41 @@ public class AccountSettingsActivity extends AppCompatActivity {
                     if (task.getResult().exists()){
 
                         DataSnapshot dataSnapshot = task.getResult();
-                        FullName.setText(String.valueOf(dataSnapshot.child("Name").getValue()));
-                        Role.setText(String.valueOf(dataSnapshot.child("Role").getValue()));
+                        FullName_Profile.setText(String.valueOf(dataSnapshot.child("Name").getValue()));
+                        Gmail.setText(String.valueOf(dataSnapshot.child("Email").getValue()));
                     }
 
                 }
+            }
+        });
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setBackground(null);
+        bottomNavigationView.setSelectedItemId(R.id.miSettings);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.miCalendar:
+                        return true;
+
+                    case R.id.Task:
+                        startActivity(new Intent(getApplicationContext(),TaskList.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.miHome:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.miSettings:
+                        startActivity(new Intent(getApplicationContext(),AccountSettingsActivity.class));
+                        overridePendingTransition(0,0);
+                        return  true;
+                    case R.id.AddTask:
+                        startActivity(new Intent(getApplicationContext(),AddModifyTask_Company.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+                return false;
             }
         });
     }
@@ -81,5 +108,9 @@ public class AccountSettingsActivity extends AppCompatActivity {
     }
     public void Back(View view){
         startActivity(new Intent(AccountSettingsActivity.this,MainActivity.class));
+    }
+    public void AddTask(View view){
+        startActivity(new Intent(getApplicationContext(),AddModifyTask_Company.class));
+        finish();
     }
 }

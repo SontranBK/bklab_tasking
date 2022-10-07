@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/Setstatus"
+        android:layout_width="268dp"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_button_profile"
+        android:fontFamily="Lexend Deca"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="19sp" />
+    <TextView
+        android:id="@+id/In_Process"
+        android:layout_width="201dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rectangle_1075_shape"
+        android:gravity="center"
+        android:text="In Process"
+        android:textColor="#000000"
+        android:fontFamily="Lexend Deca"
+        android:layout_marginTop="40dp"
+        android:textSize="17sp"/>
+    <TextView
+        android:id="@+id/Cancel"
+        android:layout_width="201dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rectangle_1075_shape"
+        android:gravity="center"
+        android:text="Cancel"
+        android:textColor="#000000"
+        android:fontFamily="Lexend Deca"
+        android:layout_marginTop="40dp"
+        android:textSize="19sp"/>
+    <TextView
+        android:id="@+id/Complete"
+        android:layout_width="201dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rectangle_1075_shape"
+        android:gravity="center"
+        android:text="Complete"
+        android:textColor="#000000"
+        android:fontFamily="Lexend Deca"
+        android:layout_marginTop="40dp"
+        android:textSize="19sp"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="261dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/custom_button_profile"
+        android:text="Set" />
+
+
+</LinearLayout>

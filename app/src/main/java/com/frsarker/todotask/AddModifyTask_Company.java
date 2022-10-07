@@ -28,8 +28,9 @@ public class AddModifyTask_Company extends AppCompatActivity {
     String Colab ="";
     Calendar calendarStart,calendarEnd;
     EditText edit_text,edit_nametask;
-    TextView dateTextStart,dateTextEnd,txtStart,txtEnd,Colab_with;
+    TextView new_task,description;
     Button save_btn;
+    TextView dateTextStart,dateTextEnd,txtStart,txtEnd,Colab_with;
     private DatabaseReference mDatabase;
     FirebaseAuth mAuth;
     @Override
@@ -37,13 +38,15 @@ public class AddModifyTask_Company extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_modify_task_company);
+        new_task = findViewById(R.id.add_project);
         calendarStart = new GregorianCalendar();
         calendarEnd = new GregorianCalendar();
-        edit_text = findViewById(R.id.edit_text);
+        edit_text = findViewById(R.id.Description_task);
+        description = findViewById(R.id.description);
         dateTextStart = findViewById(R.id.dateTextStart);
         dateTextEnd = findViewById(R.id.dateTextEnd);
-        txtStart = findViewById(R.id.time_begin);
-        txtEnd = findViewById(R.id.time_end);
+        txtStart = findViewById(R.id.dateTextStart);
+        txtEnd = findViewById(R.id.dateTextEnd);
         save_btn = findViewById(R.id.save_btn);
         edit_nametask = findViewById(R.id.edit_nametask);
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -92,7 +95,7 @@ public class AddModifyTask_Company extends AppCompatActivity {
         builder.setPositiveButton("Set", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 calendarStart = new GregorianCalendar(datePicker.getYear(), datePicker.getMonth(), datePicker.getDayOfMonth());
-                dateTextStart.setText(new SimpleDateFormat("E,dd/MM/yyyy").format(calendarStart.getTime()));
+                dateTextStart.setText(new SimpleDateFormat("E , dd/MM/yyyy").format(calendarStart.getTime()));
             }
         });
         builder.show();
@@ -108,7 +111,7 @@ public class AddModifyTask_Company extends AppCompatActivity {
         builder.setPositiveButton("Set", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 calendarEnd = new GregorianCalendar(datePicker.getYear(), datePicker.getMonth(), datePicker.getDayOfMonth());
-                dateTextEnd.setText(new SimpleDateFormat("E,dd/MM/yyyy").format(calendarEnd.getTime()));
+                dateTextEnd.setText(new SimpleDateFormat("E , dd/MM/yyyy").format(calendarEnd.getTime()));
             }
         });
         builder.show();
@@ -123,6 +126,9 @@ public class AddModifyTask_Company extends AppCompatActivity {
         intent.putExtra("TimeEnd",dateTextEnd.getText().toString());
         startActivity(intent);
         finish();
+    }
+    public void Back(View v){
+        startActivity(new Intent(AddModifyTask_Company.this,MainActivity.class));
     }
 
 }

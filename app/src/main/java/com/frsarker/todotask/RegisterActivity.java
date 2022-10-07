@@ -2,6 +2,7 @@ package com.frsarker.todotask;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.strictmode.WebViewMethodCalledOnWrongThreadViolation;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -23,58 +24,98 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class RegisterActivity extends AppCompatActivity {
-    EditText InputFullname, InputEmail, InputPassword, InputPhoneNumber;
-    CheckBox ckAdmin, ckUser;
-    Button crtAccount, backtoadmin;
-    boolean valid = true;
+
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
     private DatabaseReference mDatabase;
     static int count = 1;
-
+    private View _bg__registration_ek2;
+    private View ellipse_1;
+    private View ellipse_1_ek1;
+    private View rectangle_1;
+    private TextView get_started;
+    private TextView welcome_onboard_;
+    private TextView lets_help_you_meet_up_your_task;
+    private TextView already_have_an_account___sign_in;
+    private View rectangle_2;
+    private EditText enter_your_full_name;
+    private View rectangle_2_ek1;
+    private EditText enter_your_email;
+    private View rectangle_2_ek2;
+    private EditText enter_password;
+    private View rectangle_2_ek3;
+    private EditText confirm_password;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        InputFullname = findViewById(R.id.edtFullname);
-        InputEmail = findViewById(R.id.edtEmail);
-        InputPassword = findViewById(R.id.edtPassword);
-        InputPhoneNumber = findViewById(R.id.edtNumberPhone);
-        ckAdmin = findViewById(R.id.checkAdmin);
-        ckUser = findViewById(R.id.checkUser);
-        crtAccount = findViewById(R.id.btnCreateAccount);
-        backtoadmin = findViewById(R.id.backtoclient);
+        _bg__registration_ek2 = findViewById(R.id._bg__login_ek2);
+        ellipse_1 = findViewById(R.id.ellipse_1);
+        ellipse_1_ek1 = findViewById(R.id.ellipse_1_ek1);
+        rectangle_1 =  findViewById(R.id.rectangle_1);
+        get_started = findViewById(R.id.get_started);
+        welcome_onboard_ =  findViewById(R.id.welcome_onboard_);
+        lets_help_you_meet_up_your_task = findViewById(R.id.lets_help_you_meet_up_your_task);
+        already_have_an_account___sign_in =  findViewById(R.id.already_have_an_account___sign_in);
+        rectangle_2 = (View) findViewById(R.id.rectangle_2);
+        enter_your_full_name =  findViewById(R.id.enter_your_full_name);
+        rectangle_2_ek1 =  findViewById(R.id.rectangle_2_ek1);
+        enter_your_email =  findViewById(R.id.enter_your_email);
+        rectangle_2_ek2 = findViewById(R.id.rectangle_2_ek2);
+        enter_password =  findViewById(R.id.enter_password);
+        rectangle_2_ek3 = findViewById(R.id.rectangle_2_ek3);
+        confirm_password = findViewById(R.id.confirm_password);
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        crtAccount.setOnClickListener(view -> {
-            mAuth.createUserWithEmailAndPassword(InputEmail.getText().toString(), InputPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
+    }
+    public void Register_user(View view){
+        /*mAuth.createUserWithEmailAndPassword(enter_your_email.getText().toString(), enter_password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                FirebaseUser user = mAuth.getCurrentUser();
+                DocumentReference df = fStore.collection("User").document(user.getUid());
+                Map<String, Object> userInfo = new HashMap<>();
+                userInfo.put("Name", enter_your_full_name.getText().toString());
+                userInfo.put("UserEmail", enter_your_email.getText().toString());
+                if(enter_password.getText().toString() != confirm_password.getText().toString()){
+                    Toast.makeText(RegisterActivity.this, "Check again password conform", Toast.LENGTH_SHORT).show();
+                }
+                else{
                     FirebaseUser user = mAuth.getCurrentUser();
                     DocumentReference df = fStore.collection("User").document(user.getUid());
                     Map<String, Object> userInfo = new HashMap<>();
-                    userInfo.put("Name", InputFullname.getText().toString());
-                    userInfo.put("UserEmail", InputEmail.getText().toString());
-                    userInfo.put("PhoneNumber", InputPhoneNumber.getText().toString());
-                    if (ckAdmin.isChecked()) {
-                        userInfo.put("Role", 1);
-                        mDatabase.child("User").child(InputFullname.getText().toString()).child("Role").setValue("Admin");
-                    } else {
-                        userInfo.put("Role", 2);
-                        mDatabase.child("User").child(InputFullname.getText().toString()).child("Role").setValue("user");
-                    }
+                    userInfo.put("Name", enter_your_full_name.getText().toString());
+                    userInfo.put("UserEmail", enter_your_email.getText().toString());
+                    userInfo.put("Role", 2);
+                    mDatabase.child("User").child(enter_your_full_name.getText().toString()).child("Role").setValue("user");
                     df.set(userInfo);
-                    mDatabase.child("User").child(InputFullname.getText().toString()).child("Name").setValue(InputFullname.getText().toString());
+                    mDatabase.child("User").child(enter_your_full_name.getText().toString()).child("Name").setValue(enter_your_full_name.getText().toString());
                     Toast.makeText(RegisterActivity.this, "Account Created", Toast.LENGTH_SHORT).show();
                 }
-            });
-        });
-        backtoadmin.setOnClickListener(view->{
-            startActivity(new Intent(RegisterActivity.this,AdminActivity.class));
-        });
+                    if (ckAdmin.isChecked()) {
+                        userInfo.put("Role", 1);
+                        mDatabase.child("User").child(enter_your_full_name.getText().toString()).child("Role").setValue("Admin");
+                    } else {
+                        userInfo.put("Role", 2);
+                        mDatabase.child("User").child(enter_your_full_name.getText().toString()).child("Role").setValue("user");
+                    }
+                userInfo.put("Role", 2);
+                mDatabase.child("User").child(enter_your_full_name.getText().toString()).child("Role").setValue("user");
+                df.set(userInfo);
+                mDatabase.child("User").child(enter_your_full_name.getText().toString()).child("Name").setValue(enter_your_full_name.getText().toString());
+                Toast.makeText(RegisterActivity.this, "Account Created", Toast.LENGTH_SHORT).show()
+            }
+        });*/
+        startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
 
+    }
+    public  void OpenLogin(View view){
+        startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
     }
 }
 

@@ -3,6 +3,7 @@ package com.frsarker.todotask;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -13,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,6 +30,7 @@ public class TaskList extends AppCompatActivity implements MyAdapter_Company.OnT
     MyAdapter_Company myAdapter_company;
     ArrayList<Task_Company> list;
     Button Personal,Company,User;
+    BottomNavigationView bottomNavigationView;
     private DatabaseReference mDatabase;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,17 +44,6 @@ public class TaskList extends AppCompatActivity implements MyAdapter_Company.OnT
         myAdapter_company = new MyAdapter_Company(this,list,this);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         recyclerView.setAdapter(myAdapter_company);
-        Personal = findViewById(R.id.Personal);
-        Company = findViewById(R.id.Company);
-        User = findViewById(R.id.button2);
-        User.setOnClickListener(view->{
-            startActivity(new Intent(TaskList.this,AccountSettingsActivity.class));
-            finish();
-        });
-        Personal.setOnClickListener(view->{
-            startActivity(new Intent(TaskList.this,MainActivity.class));
-            finish();
-        });
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -68,6 +60,32 @@ public class TaskList extends AppCompatActivity implements MyAdapter_Company.OnT
 
             }
         });
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setBackground(null);
+        bottomNavigationView.setSelectedItemId(R.id.Task);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.miCalendar:
+                        return true;
+
+                    case R.id.Task:
+                        startActivity(new Intent(getApplicationContext(),TaskList.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.miHome:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.miSettings:
+                        startActivity(new Intent(getApplicationContext(),AccountSettingsActivity.class));
+                        overridePendingTransition(0,0);
+                        return  true;
+                }
+                return false;
+            }
+        });
     }
 
     @Override
@@ -80,16 +98,12 @@ public class TaskList extends AppCompatActivity implements MyAdapter_Company.OnT
         intent.putExtra("TimeBegin",task_company.getTimeBegin());
         intent.putExtra("TimeEnd",task_company.getTimeEnd());
         intent.putExtra("Member",task_company.getMember());
+        intent.putExtra("Status", task_company.getStatus());
         startActivity(intent);
+        finish();
     }
-    public void openAddModifyTask(View v){
-        Intent intent =new Intent(TaskList.this,AddModifyTask_Company.class);
-        intent.putExtra("Id","");
-        intent.putExtra("NameTask","");
-        intent.putExtra("Description","");
-        intent.putExtra("TimeBegin","Sat,24 September 2022");
-        intent.putExtra("TimeEnd","Sat,24 September 2022");
-        intent.putExtra("Member","");
-        startActivity(intent);
+    public void AddTask(View view){
+        startActivity(new Intent(getApplicationContext(),AddModifyTask_Company.class));
+        finish();
     }
 }

@@ -65,6 +65,7 @@ public class userList extends AppCompatActivity implements MyAdapter.OnItemClick
                 intent.putExtra("TimeBegin",getIntent().getStringExtra("TimeBegin"));
                 intent.putExtra("TimeEnd",getIntent().getStringExtra("TimeEnd"));
                 intent.putExtra("Member",Colab);
+                intent.putExtra("Status",getIntent().getStringExtra("Status"));
                 startActivity(intent);
         });
 

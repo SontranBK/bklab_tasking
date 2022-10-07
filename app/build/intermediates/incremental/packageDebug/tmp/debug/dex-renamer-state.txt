@@ -1,7 +1,13 @@
-#Wed Sep 28 00:11:42 ICT 2022
-base.1=E\:\\Testapp\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
-path.1=classes2.dex
-base.0=E\:\\Testapp\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Fri Oct 07 22:57:27 ICT 2022
+path.3=classes2.dex
+path.2=13/classes.dex
+path.1=0/classes.dex
+path.0=classes.dex
+base.3=E\:\\Testapp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.2=E\:\\Testapp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
+base.1=E\:\\Testapp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=E\:\\Testapp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-path.0=classes.dex

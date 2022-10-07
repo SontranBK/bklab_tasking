@@ -3,35 +3,61 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Testapp/app/src/main/res/drawable-anydpi/_bg__let_s_start_ek2_shape.xml" value="0.1955" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable-anydpi/_bg__registration_ek2_shape.xml" value="0.1715" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable-anydpi/ellipse_10_shape.xml" value="0.1715" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable-anydpi/ellipse_1_ek1_shape.xml" value="0.1715" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable-anydpi/ellipse_4_shape.xml" value="0.1715" />
         <entry key="..\:/Testapp/app/src/main/res/drawable-anydpi/ic_fab_add.xml" value="0.2615" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable-anydpi/rectangle_1_shape.xml" value="0.155" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable-mdpi/ellipse_17_shape.xml" value="0.127" />
         <entry key="..\:/Testapp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2265" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable-v24/rectangle_1053_shape.xml" value="0.155" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable-v24/rectangle_1075_shape.xml" value="0.155" />
         <entry key="..\:/Testapp/app/src/main/res/drawable-xhdpi/_bg__login_ek2_shape.xml" value="0.1715" />
         <entry key="..\:/Testapp/app/src/main/res/drawable-xhdpi/ellipse_1_ek1_shape.xml" value="0.1715" />
         <entry key="..\:/Testapp/app/src/main/res/drawable-xhdpi/ellipse_1_shape.xml" value="0.1715" />
         <entry key="..\:/Testapp/app/src/main/res/drawable-xhdpi/rectangle_1_shape.xml" value="0.1715" />
         <entry key="..\:/Testapp/app/src/main/res/drawable-xhdpi/rectangle_2_ek1_shape.xml" value="0.1715" />
         <entry key="..\:/Testapp/app/src/main/res/drawable-xhdpi/rectangle_2_shape.xml" value="0.1715" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable/background_white.xml" value="0.155" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable/custom_button_profile.xml" value="0.155" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable/custom_letstart.xml" value="0.155" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable/custom_task_item.xml" value="0.155" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable/female_welcome_background.xml" value="0.155" />
         <entry key="..\:/Testapp/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1715" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable/ic_baseline_assignment_24.xml" value="0.155" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable/ic_baseline_calendar_month_24.xml" value="0.155" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.155" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable/ic_baseline_notifications_24.xml" value="0.155" />
         <entry key="..\:/Testapp/app/src/main/res/drawable/ic_baseline_supervised_user_circle_24.xml" value="0.2615" />
         <entry key="..\:/Testapp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3575" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable/item_status.xml" value="0.1555" />
         <entry key="..\:/Testapp/app/src/main/res/drawable/radius_border_button.xml" value="0.1715" />
-        <entry key="..\:/Testapp/app/src/main/res/layout/acitivy_pofile.xml" value="0.4" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable/rectangle1_welcome_background.xml" value="0.155" />
+        <entry key="..\:/Testapp/app/src/main/res/drawable/rectangle_1_welcome.xml" value="0.1955" />
+        <entry key="..\:/Testapp/app/src/main/res/layout/acitivy_pofile.xml" value="0.2" />
         <entry key="..\:/Testapp/app/src/main/res/layout/activity_add_modify_task.xml" value="0.259375" />
         <entry key="..\:/Testapp/app/src/main/res/layout/activity_add_modify_task_company.xml" value="0.259375" />
         <entry key="..\:/Testapp/app/src/main/res/layout/activity_admin.xml" value="0.3723958333333333" />
         <entry key="..\:/Testapp/app/src/main/res/layout/activity_delete_update_task_company.xml" value="0.25833333333333336" />
         <entry key="..\:/Testapp/app/src/main/res/layout/activity_login.xml" value="0.259375" />
-        <entry key="..\:/Testapp/app/src/main/res/layout/activity_main.xml" value="0.259375" />
-        <entry key="..\:/Testapp/app/src/main/res/layout/activity_register.xml" value="0.3723958333333333" />
-        <entry key="..\:/Testapp/app/src/main/res/layout/activity_tasklist.xml" value="0.536" />
+        <entry key="..\:/Testapp/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Testapp/app/src/main/res/layout/activity_register.xml" value="0.26867469879518074" />
+        <entry key="..\:/Testapp/app/src/main/res/layout/activity_tasklist.xml" value="0.2" />
         <entry key="..\:/Testapp/app/src/main/res/layout/activity_userlist.xml" value="0.259375" />
+        <entry key="..\:/Testapp/app/src/main/res/layout/activity_welcome.xml" value="0.2" />
         <entry key="..\:/Testapp/app/src/main/res/layout/date_picker.xml" value="0.259375" />
         <entry key="..\:/Testapp/app/src/main/res/layout/item.xml" value="0.259375" />
+        <entry key="..\:/Testapp/app/src/main/res/layout/item_status.xml" value="0.25833333333333336" />
         <entry key="..\:/Testapp/app/src/main/res/layout/task_list_row.xml" value="0.259375" />
         <entry key="..\:/Testapp/app/src/main/res/layout/task_list_row_company.xml" value="0.22432432432432434" />
+        <entry key="..\:/Testapp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.259375" />
         <entry key="..\:/Testapp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2265" />
         <entry key="..\:/Testapp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.127" />
         <entry key="..\:/Testapp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_user.xml" value="0.2645" />
+        <entry key="..\:/Testapp/app/src/main/res/mipmap-anydpi-v26/rectangle1_welcome.xml" value="0.155" />
+        <entry key="..\:/Testapp/app/src/main/res/mipmap-anydpi-v26/rectangle1_welcome_round.xml" value="0.155" />
         <entry key="..\:/ToDoTaskApp/app/src/main/res/layout/activity_login.xml" value="0.259375" />
         <entry key="..\:/ToDoTaskApp/app/src/main/res/layout/activity_main.xml" value="0.259375" />
       </map>

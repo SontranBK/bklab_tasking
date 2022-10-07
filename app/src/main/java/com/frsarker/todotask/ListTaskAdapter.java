@@ -75,7 +75,6 @@ public class ListTaskAdapter extends BaseAdapter {
                         database.updateTaskStatus(singleTask.get("id"), 0);
                         tmpHolder.task_name.setText(singleTask.get("task"));
                     }
-
                 }
             });
 

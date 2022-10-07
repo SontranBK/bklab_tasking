@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="19"
+        android:minSdkVersion="27"
         android:targetSdkVersion="32" />
 
     <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
@@ -17,32 +17,40 @@
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
+        android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher_foreground"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_foreground"
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/CustomTheme" >
+        <activity android:name="com.frsarker.todotask.SetStatus" />
+        <activity android:name="com.frsarker.todotask.Welcome" />
         <activity android:name="com.frsarker.todotask.AccountSettingsActivity" />
         <activity android:name="com.frsarker.todotask.userList_Update" />
         <activity android:name="com.frsarker.todotask.Update_Delete_Task_Company" />
         <activity android:name="com.frsarker.todotask.userList" />
         <activity android:name="com.frsarker.todotask.TaskList" />
         <activity android:name="com.frsarker.todotask.AddModifyTask_Company" />
-        <activity android:name="com.frsarker.todotask.AdminActivity" />
         <activity android:name="com.frsarker.todotask.RegisterActivity" />
-        <activity android:name="com.frsarker.todotask.LoginActivity" />
         <activity
-            android:name="com.frsarker.todotask.AddModifyTask"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name="com.frsarker.todotask.MainActivity"
+            android:name="com.frsarker.todotask.LoginActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.frsarker.todotask.AddModifyTask"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.frsarker.todotask.MainActivity" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
 
         <service
@@ -114,6 +122,18 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.frsarker.todotask.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
     </application>
 
 </manifest>

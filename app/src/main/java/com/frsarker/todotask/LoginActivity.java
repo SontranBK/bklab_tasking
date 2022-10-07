@@ -68,6 +68,13 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user != null){
+            startActivity(new Intent( LoginActivity.this,MainActivity.class));
+        }
+    }
     public void loginUser(View view){
         mAuth.signInWithEmailAndPassword(enter_your_email.getText().toString(),confirm_password.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
@@ -82,7 +89,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                             mDatabase.child("Users").child(user.getUid()).child("Name").setValue(value.getString("Name"));
-                            if( value.getLong("Role") == 1){
+                            /*if( value.getLong("Role") == 1){
                                 mDatabase.child("Users").child(user.getUid()).child("Role").setValue("Admin");
 
                                 startActivity(new Intent(LoginActivity.this,AdminActivity.class));
@@ -91,7 +98,8 @@ public class LoginActivity extends AppCompatActivity {
                                 mDatabase.child("Users").child(user.getUid()).child("Role").setValue(value.getString("User"));
 
                                 startActivity(new Intent(LoginActivity.this,MainActivity.class));
-                            }
+                            }*/
+                            startActivity(new Intent(LoginActivity.this,Welcome.class));
                         }
                     });
                     Log.d(TAG,"Sign successful");
@@ -103,5 +111,8 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+    public void OpenRegister(View view){
+        startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
     }
 }

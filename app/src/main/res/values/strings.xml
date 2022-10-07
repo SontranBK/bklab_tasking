@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">ToDo Task</string>
+    <string name="lets_help_you_meet_up_your_task_string">Lets help you meet up your task</string>
+    <string name="already_have_an_account___sign_in_string">Already have an account ? Sign in</string>
+    <string name="enter_your_full_name_string">Enter your full name</string>
+    <string name="enter_your_email_string">Enter your email</string>
+    <string name="enter_password_string">Enter password</string>
+    <string name="confirm_password_string">Confirm password</string>
+    <string name="task_management___to_do_list_string">Task Management And To-Do List</string>
+    <string name="let_s_start_ek3_string">Let\'s Start</string>
+    <string name="this_productive_tool_is_designed_to_help_you_better_manage_your_task_project_wise_conveniently__string">This productive tool is designed to helpyou better manage your task project-wise conveniently!</string>
+    <string name="project_name_string">Project Name</string>
+    <string name="star_date_string">Star Date</string>
+    <string name="end_date_string">End Date</string>
+    <string name="description_string">Description</string>
+    <string name="add_project_ek1_string">Add Project</string>
+    <string name="grocery_shopping_app_string">Grocery Shopping App</string>
+    <string name="_01_may__2022_string">01 May, 2022</string>
+    <string name="_30_june__2022_string">30 June, 2022</string>
+    <string name="this_application_is_designed_for_super_shops__by_using_this_application_they_can_enlist_all_their_products_in_one_place_and_can_deliver__customers_will_get_a_one_stop_solution_for_their_daily_shopping__string">This application is designed for super shops. By using this application they can enlist all their products in one place and can deliver. Customers will get a one-stop solution for their daily shopping.</string>
+    <string name="task_group_string">Task Group</string>
+    <string name="work_string">Work</string>
+    <string name="change_logo_string">Change Logo</string>
+    <string name="grocery_shop_string">Groceryshop</string>
+
 </resources>

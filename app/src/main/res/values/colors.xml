@@ -19,4 +19,15 @@
     <color name="rectangle_2_color">#FFFAFA</color>
     <color name="forgot_password_color">#2AAAA2</color>
     <color name="get_started_color">#FFFFFF</color>
+    <color name="_9_40_color">#000000</color>
+    <color name="rectangle_1_color">#2AAAA2</color>
+    <color name="_bg__add_project_in_task_list_ek2_color">#FFFFFF</color>
+    <color name="add_project_color">#24252C</color>
+    <color name="ellipse_28_color">#5F33E1</color>
+    <color name="project_name_color">#6E6A7C</color>
+    <color name="rectangle_1053_color">#FFE4F2</color>
+    <color name="ellipse_29_color">#D9D9D9</color>
+    <color name="rectangle_1062_color">#EDE8FF</color>
+    <color name="grocery_shop_color">#047C78</color>
+
 </resources>

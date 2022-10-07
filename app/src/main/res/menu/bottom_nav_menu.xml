@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/miHome"
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"
+        />
+    <item android:id="@+id/miCalendar"
+        android:title="Calendar"
+        android:icon="@drawable/ic_baseline_calendar_month_24" />
+    <item android:id="@+id/AddTask"
+        android:title=""
+        />
+    <item android:id="@+id/Task"
+        android:title="Task"
+        android:icon="@drawable/ic_baseline_assignment_24"
+        />
+    <item android:id="@+id/miSettings"
+        android:title="Profile"
+        android:icon="@drawable/ic_baseline_supervised_user_circle_24"
+        />
+</menu>

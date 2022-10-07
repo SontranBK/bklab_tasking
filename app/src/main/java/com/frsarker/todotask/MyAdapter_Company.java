@@ -1,10 +1,12 @@
 package com.frsarker.todotask;
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -38,6 +40,16 @@ public class MyAdapter_Company extends RecyclerView.Adapter<MyAdapter_Company.My
         holder.NameTask.setText(task_company.getNameTask());
         holder.Status.setText(task_company.getStatus());
         holder.Member.setText(task_company.getMember());
+        holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    holder.Status.setText("Complete");
+                } else {
+                    holder.Status.setText("In Process");
+                }
+            }
+        });
     }
 
     @Override

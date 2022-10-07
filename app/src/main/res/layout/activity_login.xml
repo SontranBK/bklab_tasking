@@ -132,7 +132,8 @@
                         android:hint="Confirm passsword"
                         android:inputType="textPassword"
                         android:textColor="@color/welcome_back__color"
-                        android:textSize="13sp" />
+                        android:textSize="13sp"
+                        android:background="@drawable/rectangle_2_shape"/>
 
                 </RelativeLayout>
 
@@ -147,7 +148,8 @@
                     android:gravity="center"
                     android:hint="Forgot password"
                     android:textColor="@color/forgot_password_color"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:background="@drawable/rectangle_2_shape"/>
 
 
                 <RelativeLayout
@@ -171,7 +173,7 @@
                         android:layout_width="337dp"
                         android:layout_height="73dp"
                         android:layout_gravity="center_horizontal|center"
-                        android:layout_marginLeft="-1dp"
+                        android:layout_marginLeft="0dp"
                         android:layout_marginTop="0dp"
                         android:fontFamily="Roboto"
                         android:gravity="center"
@@ -191,7 +193,8 @@
                     android:fontFamily="Roboto"
                     android:text="Already have an account ? Register"
                     android:textColor="@color/welcome_back__color"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:onClick="OpenRegister"/>
 
             </RelativeLayout>
         </RelativeLayout>

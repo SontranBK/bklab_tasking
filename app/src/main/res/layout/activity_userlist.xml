@@ -23,7 +23,8 @@
             android:layout_width="172dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Complete" />
+            android:text="Complete"
+            android:background="@drawable/custom_button_profile"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
