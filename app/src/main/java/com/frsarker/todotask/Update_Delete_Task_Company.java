@@ -40,6 +40,8 @@ public class Update_Delete_Task_Company extends AppCompatActivity {
     Button update_btn,delete_btn,setStatus;
     private DatabaseReference mDatabase;
     FirebaseAuth mAuth;
+
+    int day,day1,month,month1,year,year1;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,8 +60,8 @@ public class Update_Delete_Task_Company extends AppCompatActivity {
         delete_btn = findViewById(R.id.deleteTask);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
-        dateTextStart.setText(new SimpleDateFormat("E, dd MMMM yyyy").format(calendarStart.getTime()));
-        dateTextEnd.setText(new SimpleDateFormat("E, dd MMMM yyyy").format(calendarEnd.getTime()));
+        dateTextStart.setText(new SimpleDateFormat("E,dd MMMM yyyy").format(calendarStart.getTime()));
+        dateTextEnd.setText(new SimpleDateFormat("E,dd MMMM yyyy").format(calendarEnd.getTime()));
         Colab_with = findViewById(R.id.Colab);
         edit_nametask.setText(getIntent().getStringExtra("NameTask"));
         edit_text.setText(getIntent().getStringExtra("Description"));
@@ -68,6 +70,14 @@ public class Update_Delete_Task_Company extends AppCompatActivity {
         Colab_with.setText(getIntent().getStringExtra("Member"));
         Sttus.setText(getIntent().getStringExtra("Status"));
         mDatabase.child("Task").child(getIntent().getStringExtra("Id")).removeValue();
+        String[] begin_t  = removeCharAt(removeCharAt(removeCharAt(removeCharAt(dateTextStart.getText().toString(),0),0),0),0).split("/");
+        String[] end_t    = removeCharAt(removeCharAt(removeCharAt(removeCharAt(dateTextEnd.getText().toString(),0),0),0),0).split("/");
+        day = Integer.valueOf(begin_t[0]);
+        day1 = Integer.valueOf(end_t[0]);
+        month = Integer.valueOf(begin_t[1]);
+        year = Integer.valueOf(begin_t[2]);
+        month1 = Integer.valueOf(end_t[1]);
+        year1 = Integer.valueOf(end_t[2]);
 
     }
     public void setStatus(View v){
@@ -130,7 +140,37 @@ public class Update_Delete_Task_Company extends AppCompatActivity {
         builder.setPositiveButton("Set", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 calendarStart = new GregorianCalendar(datePicker.getYear(), datePicker.getMonth(), datePicker.getDayOfMonth());
-                dateTextStart.setText(new SimpleDateFormat("E,dd/MM/yyyy").format(calendarStart.getTime()));
+                if(Integer.valueOf(datePicker.getYear()) > year1){
+                    Toast.makeText(Update_Delete_Task_Company.this, "Check time again", Toast.LENGTH_SHORT).show();
+                }
+                else if(Integer.valueOf(datePicker.getYear()).equals(year1)){
+                    if(Integer.valueOf(datePicker.getMonth()) > month1){
+                        Toast.makeText(Update_Delete_Task_Company.this, "Check time again", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(Integer.valueOf(datePicker.getMonth()).equals(month1)){
+                        if(Integer.valueOf(datePicker.getDayOfMonth()) > day1){
+                            Toast.makeText(Update_Delete_Task_Company.this, "Check time again", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            day = Integer.valueOf(datePicker.getDayOfMonth());
+                            month = Integer.valueOf(datePicker.getMonth());
+                            year = Integer.valueOf(datePicker.getYear());
+                            dateTextStart.setText(new SimpleDateFormat("E,dd/MM/yyyy").format(calendarStart.getTime()));
+                        }
+                    }
+                    else{
+                        day = Integer.valueOf(datePicker.getDayOfMonth());
+                        month = Integer.valueOf(datePicker.getMonth());
+                        year = Integer.valueOf(datePicker.getYear());
+                        dateTextStart.setText(new SimpleDateFormat("E,dd/MM/yyyy").format(calendarStart.getTime()));
+                    }
+                }
+                else{
+                    day = Integer.valueOf(datePicker.getDayOfMonth());
+                    month = Integer.valueOf(datePicker.getMonth());
+                    year = Integer.valueOf(datePicker.getYear());
+                    dateTextStart.setText(new SimpleDateFormat("E,dd/MM/yyyy").format(calendarStart.getTime()));
+                }
             }
         });
         builder.show();
@@ -146,7 +186,37 @@ public class Update_Delete_Task_Company extends AppCompatActivity {
         builder.setPositiveButton("Set", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 calendarEnd = new GregorianCalendar(datePicker.getYear(), datePicker.getMonth(), datePicker.getDayOfMonth());
-                dateTextEnd.setText(new SimpleDateFormat("E,dd/MM/yyyy").format(calendarEnd.getTime()));
+                if(Integer.valueOf(datePicker.getYear()) < year){
+                    Toast.makeText(Update_Delete_Task_Company.this, "Check time again", Toast.LENGTH_SHORT).show();
+                }
+                else if(Integer.valueOf(datePicker.getYear()).equals(year)){
+                    if(Integer.valueOf(datePicker.getMonth()) < month){
+                        Toast.makeText(Update_Delete_Task_Company.this, "Check time again", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(Integer.valueOf(datePicker.getMonth()).equals(month)){
+                        if(Integer.valueOf(datePicker.getDayOfMonth()) < day){
+                            Toast.makeText(Update_Delete_Task_Company.this, "Check time again", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            day1 = Integer.valueOf(datePicker.getDayOfMonth());
+                            month1 = Integer.valueOf(datePicker.getMonth());
+                            year1 = Integer.valueOf(datePicker.getYear());
+                            dateTextEnd.setText(new SimpleDateFormat("E,dd/MM/yyyy").format(calendarEnd.getTime()));
+                        }
+                    }
+                    else{
+                        day1 = Integer.valueOf(datePicker.getDayOfMonth());
+                        month1 = Integer.valueOf(datePicker.getMonth());
+                        year1 = Integer.valueOf(datePicker.getYear());
+                        dateTextEnd.setText(new SimpleDateFormat("E,dd/MM/yyyy").format(calendarEnd.getTime()));
+                    }
+                }
+                else{
+                    day1 = Integer.valueOf(datePicker.getDayOfMonth());
+                    month1 = Integer.valueOf(datePicker.getMonth());
+                    year1 = Integer.valueOf(datePicker.getYear());
+                    dateTextEnd.setText(new SimpleDateFormat("E,dd/MM/yyyy").format(calendarEnd.getTime()));
+                }
             }
         });
         builder.show();
@@ -154,7 +224,9 @@ public class Update_Delete_Task_Company extends AppCompatActivity {
     public void Back(View v){
         UpdateTask();
         startActivity(new Intent(Update_Delete_Task_Company.this,TaskList.class));
-
         finish();
+    }
+    public static String removeCharAt(String s, int pos) {
+        return s.substring(0, pos) + s.substring(pos + 1);
     }
 }

@@ -296,6 +296,10 @@
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-37:\\mipmap-mdpi\\piechart_welcome_foreground.png"
     },
     {
+        "merged": "com.frsarker.todotask.app-merged_res-35:/layout_activity_register.xml.flat",
+        "source": "com.frsarker.todotask.app-main-37:/layout/activity_register.xml"
+    },
+    {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-35:\\mipmap-xxxhdpi_arrow_left_ek1_welcome_forgound.png.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-37:\\mipmap-xxxhdpi\\arrow_left_ek1_welcome_forgound.png"
     },
@@ -418,10 +422,6 @@
     {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-35:\\mipmap-hdpi_muticole_welcome_round.png.flat",
         "source": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-main-37:\\mipmap-hdpi\\muticole_welcome_round.png"
-    },
-    {
-        "merged": "com.frsarker.todotask.app-merged_res-35:/layout_acitivy_pofile.xml.flat",
-        "source": "com.frsarker.todotask.app-main-37:/layout/acitivy_pofile.xml"
     },
     {
         "merged": "C:\\Users\\xuanp\\.gradle\\daemon\\7.3.3\\com.frsarker.todotask.app-merged_res-35:\\mipmap-hdpi_arrow_left_ek1_welcome.png.flat",

@@ -76,19 +76,23 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
     public void loginUser(View view){
-        mAuth.signInWithEmailAndPassword(enter_your_email.getText().toString(),confirm_password.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    FirebaseUser user = mAuth.getCurrentUser();
-                    mDatabase.child("Users").child(user.getUid()).child("Email").setValue(user.getEmail());
-                    Toast.makeText(LoginActivity.this,"Login successful",Toast.LENGTH_SHORT).show();
-                    fstore = FirebaseFirestore.getInstance();
-                    DocumentReference documentReference = fstore.collection("User").document(user.getUid());
-                    documentReference.addSnapshotListener(LoginActivity.this, new EventListener<DocumentSnapshot>() {
-                        @Override
-                        public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                            mDatabase.child("Users").child(user.getUid()).child("Name").setValue(value.getString("Name"));
+        if(enter_your_email.getText().toString().isEmpty() || confirm_password.getText().toString().isEmpty()){
+            Toast.makeText(LoginActivity.this,"Email or Password is empty",Toast.LENGTH_SHORT).show();
+        }
+        else {
+            mAuth.signInWithEmailAndPassword(enter_your_email.getText().toString(),confirm_password.getText().toString()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()){
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        mDatabase.child("Users").child(user.getUid()).child("Email").setValue(user.getEmail());
+                        Toast.makeText(LoginActivity.this,"Login successful",Toast.LENGTH_SHORT).show();
+                        fstore = FirebaseFirestore.getInstance();
+                        DocumentReference documentReference = fstore.collection("User").document(user.getUid());
+                        documentReference.addSnapshotListener(LoginActivity.this, new EventListener<DocumentSnapshot>() {
+                            @Override
+                            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                                mDatabase.child("Users").child(user.getUid()).child("Name").setValue(value.getString("Name"));
                             /*if( value.getLong("Role") == 1){
                                 mDatabase.child("Users").child(user.getUid()).child("Role").setValue("Admin");
 
@@ -99,18 +103,20 @@ public class LoginActivity extends AppCompatActivity {
 
                                 startActivity(new Intent(LoginActivity.this,MainActivity.class));
                             }*/
-                            startActivity(new Intent(LoginActivity.this,Welcome.class));
-                        }
-                    });
-                    Log.d(TAG,"Sign successful");
+                                startActivity(new Intent(LoginActivity.this,Welcome.class));
+                            }
+                        });
+                        Log.d(TAG,"Sign successful");
 
+                    }
+                    else{
+                        Log.w(TAG,"signInWithEmail:failure",task.getException());
+                        Toast.makeText(LoginActivity.this,"Failed",Toast.LENGTH_SHORT).show();
+                    }
                 }
-                else{
-                    Log.w(TAG,"signInWithEmail:failure",task.getException());
-                    Toast.makeText(LoginActivity.this,"Failed",Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+            });
+        }
+
     }
     public void OpenRegister(View view){
         startActivity(new Intent(LoginActivity.this,RegisterActivity.class));

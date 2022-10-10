@@ -23,7 +23,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="0dp"
                     android:layout_marginTop="0dp"
-                    android:background="@drawable/_bg__login_ek2_shape" />
+                    android:background="@drawable/_bg__registration_ek2_shape" />
 
 
                 <RelativeLayout
@@ -127,13 +127,13 @@
                         android:layout_height="50dp"
                         android:layout_marginLeft="32dp"
                         android:layout_marginTop="0dp"
+                        android:background="@drawable/rectangle_2_shape"
                         android:backgroundTint="@color/white"
                         android:fontFamily="Roboto"
                         android:hint="Confirm passsword"
                         android:inputType="textPassword"
                         android:textColor="@color/welcome_back__color"
-                        android:textSize="13sp"
-                        android:background="@drawable/rectangle_2_shape"/>
+                        android:textSize="13sp" />
 
                 </RelativeLayout>
 

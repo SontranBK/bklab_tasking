@@ -33,6 +33,7 @@ public class AddModifyTask_Company extends AppCompatActivity {
     TextView dateTextStart,dateTextEnd,txtStart,txtEnd,Colab_with;
     private DatabaseReference mDatabase;
     FirebaseAuth mAuth;
+    int day=0,month=0,year=0,day1=32,month1=13,year1=9999999;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
@@ -95,7 +96,38 @@ public class AddModifyTask_Company extends AppCompatActivity {
         builder.setPositiveButton("Set", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 calendarStart = new GregorianCalendar(datePicker.getYear(), datePicker.getMonth(), datePicker.getDayOfMonth());
-                dateTextStart.setText(new SimpleDateFormat("E , dd/MM/yyyy").format(calendarStart.getTime()));
+                if(Integer.valueOf(datePicker.getYear()) > year1){
+                    Toast.makeText(AddModifyTask_Company.this, "Check time again", Toast.LENGTH_SHORT).show();
+                }
+                else if(Integer.valueOf(datePicker.getYear()).equals(year1)){
+                    if(Integer.valueOf(datePicker.getMonth()) > month1){
+                        Toast.makeText(AddModifyTask_Company.this, "Check time again", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(Integer.valueOf(datePicker.getMonth()).equals(month1)){
+                        if(Integer.valueOf(datePicker.getDayOfMonth()) > day1){
+                            Toast.makeText(AddModifyTask_Company.this, "Check time again", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            day = Integer.valueOf(datePicker.getDayOfMonth());
+                            month = Integer.valueOf(datePicker.getMonth());
+                            year = Integer.valueOf(datePicker.getYear());
+                            dateTextStart.setText(new SimpleDateFormat("E,dd/MM/yyyy").format(calendarStart.getTime()));
+                        }
+                    }
+                    else{
+                        day = Integer.valueOf(datePicker.getDayOfMonth());
+                        month = Integer.valueOf(datePicker.getMonth());
+                        year = Integer.valueOf(datePicker.getYear());
+                        dateTextStart.setText(new SimpleDateFormat("E,dd/MM/yyyy").format(calendarStart.getTime()));
+                    }
+                }
+                else{
+                    day = Integer.valueOf(datePicker.getDayOfMonth());
+                    month = Integer.valueOf(datePicker.getMonth());
+                    year = Integer.valueOf(datePicker.getYear());
+                    dateTextStart.setText(new SimpleDateFormat("E,dd/MM/yyyy").format(calendarStart.getTime()));
+                }
+                //dateTextStart.setText(new SimpleDateFormat("E , dd/MM/yyyy").format(calendarEnd.getTime()));
             }
         });
         builder.show();
@@ -111,7 +143,37 @@ public class AddModifyTask_Company extends AppCompatActivity {
         builder.setPositiveButton("Set", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 calendarEnd = new GregorianCalendar(datePicker.getYear(), datePicker.getMonth(), datePicker.getDayOfMonth());
-                dateTextEnd.setText(new SimpleDateFormat("E , dd/MM/yyyy").format(calendarEnd.getTime()));
+                if(Integer.valueOf(datePicker.getYear()) < year){
+                    Toast.makeText(AddModifyTask_Company.this, "Check time again", Toast.LENGTH_SHORT).show();
+                }
+                else if(Integer.valueOf(datePicker.getYear()).equals(year)){
+                    if(Integer.valueOf(datePicker.getMonth()) < month){
+                        Toast.makeText(AddModifyTask_Company.this, "Check time again", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(Integer.valueOf(datePicker.getMonth()).equals(month)){
+                        if(Integer.valueOf(datePicker.getDayOfMonth()) < day){
+                            Toast.makeText(AddModifyTask_Company.this, "Check time again", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            day1 = Integer.valueOf(datePicker.getDayOfMonth());
+                            month1 = Integer.valueOf(datePicker.getMonth());
+                            year1 = Integer.valueOf(datePicker.getYear());
+                            dateTextEnd.setText(new SimpleDateFormat("E,dd/MM/yyyy").format(calendarEnd.getTime()));
+                        }
+                    }
+                    else{
+                        day1 = Integer.valueOf(datePicker.getDayOfMonth());
+                        month1 = Integer.valueOf(datePicker.getMonth());
+                        year1 = Integer.valueOf(datePicker.getYear());
+                        dateTextEnd.setText(new SimpleDateFormat("E,dd/MM/yyyy").format(calendarEnd.getTime()));
+                    }
+                }
+                else{
+                    day1 = Integer.valueOf(datePicker.getDayOfMonth());
+                    month1 = Integer.valueOf(datePicker.getMonth());
+                    year1 = Integer.valueOf(datePicker.getYear());
+                    dateTextEnd.setText(new SimpleDateFormat("E,dd/MM/yyyy").format(calendarEnd.getTime()));
+                }
             }
         });
         builder.show();
@@ -128,7 +190,8 @@ public class AddModifyTask_Company extends AppCompatActivity {
         finish();
     }
     public void Back(View v){
-        startActivity(new Intent(AddModifyTask_Company.this,MainActivity.class));
+        Intent intent = new Intent(AddModifyTask_Company.this,MainActivity.class);
+        startActivity(intent);
     }
 
 }

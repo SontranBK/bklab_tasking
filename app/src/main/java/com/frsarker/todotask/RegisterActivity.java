@@ -34,22 +34,22 @@ public class RegisterActivity extends AppCompatActivity {
     FirebaseFirestore fStore;
     private DatabaseReference mDatabase;
     static int count = 1;
-    private View _bg__registration_ek2;
-    private View ellipse_1;
-    private View ellipse_1_ek1;
-    private View rectangle_1;
-    private TextView get_started;
-    private TextView welcome_onboard_;
-    private TextView lets_help_you_meet_up_your_task;
-    private TextView already_have_an_account___sign_in;
-    private View rectangle_2;
-    private EditText enter_your_full_name;
-    private View rectangle_2_ek1;
-    private EditText enter_your_email;
-    private View rectangle_2_ek2;
-    private EditText enter_password;
-    private View rectangle_2_ek3;
-    private EditText confirm_password;
+     View _bg__registration_ek2;
+    View ellipse_1;
+     View ellipse_1_ek1;
+     View rectangle_1;
+     TextView get_started;
+     TextView welcome_onboard_;
+     TextView lets_help_you_meet_up_your_task;
+    TextView already_have_an_account___sign_in;
+    View rectangle_2;
+     EditText enter_your_full_name;
+    View rectangle_2_ek1;
+    EditText enter_your_email;
+    View rectangle_2_ek2;
+    EditText enter_password;
+    View rectangle_2_ek3;
+    EditText confirm_password;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
@@ -74,30 +74,33 @@ public class RegisterActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference();
     }
     public void Register_user(View view){
-        /*mAuth.createUserWithEmailAndPassword(enter_your_email.getText().toString(), enter_password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                FirebaseUser user = mAuth.getCurrentUser();
-                DocumentReference df = fStore.collection("User").document(user.getUid());
-                Map<String, Object> userInfo = new HashMap<>();
-                userInfo.put("Name", enter_your_full_name.getText().toString());
-                userInfo.put("UserEmail", enter_your_email.getText().toString());
-                if(enter_password.getText().toString() != confirm_password.getText().toString()){
-                    Toast.makeText(RegisterActivity.this, "Check again password conform", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    FirebaseUser user = mAuth.getCurrentUser();
-                    DocumentReference df = fStore.collection("User").document(user.getUid());
-                    Map<String, Object> userInfo = new HashMap<>();
-                    userInfo.put("Name", enter_your_full_name.getText().toString());
-                    userInfo.put("UserEmail", enter_your_email.getText().toString());
-                    userInfo.put("Role", 2);
-                    mDatabase.child("User").child(enter_your_full_name.getText().toString()).child("Role").setValue("user");
-                    df.set(userInfo);
-                    mDatabase.child("User").child(enter_your_full_name.getText().toString()).child("Name").setValue(enter_your_full_name.getText().toString());
-                    Toast.makeText(RegisterActivity.this, "Account Created", Toast.LENGTH_SHORT).show();
-                }
-                    if (ckAdmin.isChecked()) {
+        if(enter_password.getText().toString().isEmpty() || enter_your_email.getText().toString().isEmpty() || enter_your_full_name.getText().toString().isEmpty() || confirm_password.getText().toString().isEmpty()){
+            Toast.makeText(RegisterActivity.this, "Check again", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            mAuth.createUserWithEmailAndPassword(enter_your_email.getText().toString(), enter_password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(!enter_password.getText().toString().equals(confirm_password.getText().toString())){
+                        Toast.makeText(RegisterActivity.this, "Check again password confirm", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        DocumentReference df = fStore.collection("User").document(user.getUid());
+                        Map<String, Object> userInfo = new HashMap<>();
+                        userInfo.put("Name", enter_your_full_name.getText().toString());
+                        userInfo.put("UserEmail", enter_your_email.getText().toString());
+                        userInfo.put("Role", 2);
+                        mDatabase.child("User").child(enter_your_full_name.getText().toString()).child("Role").setValue("user");
+                        mDatabase.child("Users").child(user.getUid()).child("Role").setValue("user");
+                        mDatabase.child("Users").child(user.getUid()).child("Name").setValue(enter_your_full_name.getText().toString());
+                        mDatabase.child("Users").child(user.getUid()).child("Email").setValue(enter_your_email.getText().toString());
+                        df.set(userInfo);
+                        mDatabase.child("User").child(enter_your_full_name.getText().toString()).child("Name").setValue(enter_your_full_name.getText().toString());
+                        Toast.makeText(RegisterActivity.this, "Account Created", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+                    }
+                    /*if (ckAdmin.isChecked()) {
                         userInfo.put("Role", 1);
                         mDatabase.child("User").child(enter_your_full_name.getText().toString()).child("Role").setValue("Admin");
                     } else {
@@ -108,10 +111,12 @@ public class RegisterActivity extends AppCompatActivity {
                 mDatabase.child("User").child(enter_your_full_name.getText().toString()).child("Role").setValue("user");
                 df.set(userInfo);
                 mDatabase.child("User").child(enter_your_full_name.getText().toString()).child("Name").setValue(enter_your_full_name.getText().toString());
-                Toast.makeText(RegisterActivity.this, "Account Created", Toast.LENGTH_SHORT).show()
-            }
-        });*/
-        startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+                Toast.makeText(RegisterActivity.this, "Account Created", Toast.LENGTH_SHORT).show()*/
+                }
+            });
+
+        }
+
 
     }
     public  void OpenLogin(View view){
