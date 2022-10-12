@@ -59,8 +59,7 @@ This product is written in Java, the application include Clients:
 ### 4.2.1. File link
  - `Login.java` file link to `activity_login.xml`
 ### 4.2.2. Description
- - Authentic is created by admin, stored in firebase Authentic, if you do not have account, contact admin to sign up (Admin: **Son Tran BK**)
- - Purpose: Sign in account to use application
+ Authentic is created by admin, stored in firebase Authentic, if you do not have account, contact admin to sign up (Admin: **Son Tran BK**). The purpose of this file is to sign in account for using our application
 ### 4.2.3. Diagram
 ![image](https://user-images.githubusercontent.com/81752065/195138977-8bfa19b5-340a-4844-b497-b903550fd63d.png)
 
@@ -106,7 +105,7 @@ Account of this application follow the format:
 <summary> 4.5. Task List</summary>
 
 ### 4.5.1. File link
-- `TaskList.java` file link to `task_list_row_company.xml`
+This file called `TaskList.java` and is connected to `task_list_row_company.xml`. It also link to ....
 ### 4.5.2. Description 
 - Task is ranged according to the List, Each Task presents NameTask, Status of Task and Member assigned by leader 
 - If click on a Task, Client "Update Task" start 
